@@ -76,7 +76,7 @@ spec:
   - port: web
 ---
 kind: HorizontalPodAutoscaler
-apiVersion: autoscaling/v2beta1
+apiVersion: autoscaling/v2alpha1
 metadata:
   name: sample-metrics-app-hpa
 spec:
