@@ -4,7 +4,7 @@ metadata:
   name: metrics-server
   namespace: kube-system
 ---
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   name: metrics-server:system:auth-delegator
@@ -17,7 +17,7 @@ subjects:
   name: metrics-server
   namespace: kube-system
 ---
-apiVersion: rbac.authorization.k8s.io/v1
+apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: RoleBinding
 metadata:
   name: metrics-server-auth-reader
@@ -31,7 +31,7 @@ subjects:
   name: metrics-server
   namespace: kube-system
 ---
-apiVersion: apps/v1beta2
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: metrics-server
